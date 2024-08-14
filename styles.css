@@ -1,0 +1,30 @@
+body {
+  height: 100%;
+  background-color:  #16161d;
+}
+
+h1 {
+    color:white;
+    margin-bottom: 80px;
+}
+
+.container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    max-height: inherit;
+    height: 100px;
+    width: 100px;
+    border: solid  #16161d;
+    border-width: 1px;
+    box-sizing: border-box;
+    background-color: #c09d2a;
+    flex:1;
+}
+
+.column.hovered {
+    background-color: #333;
+}
