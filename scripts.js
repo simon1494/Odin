@@ -1,12 +1,17 @@
-const PERCENT = 30
+const PERCENT = 50
 const colorR = Math.floor(PERCENT*192/100);
 const colorG = Math.floor(PERCENT*157/100);
 const colorB = Math.floor(PERCENT*42/100);
 
-function setListeners () {
+function setListeners (modo) {
     const columns = document.querySelectorAll(".column");
     columns.forEach((column) => {
-    column.addEventListener("mouseover", changeColor);
+        if (modo = "Random") {
+            column.addEventListener("mouseover", changeColorRandom);
+        }
+        else if (modo = "Fade") {
+            column.addEventListener("mouseover", changeColor);
+        }
     })
 
     const btn_reset = document.querySelector(".reset");
@@ -36,7 +41,8 @@ function createGrid(parent,x=4){
             row.appendChild(column);
         };
     }
-    setListeners()
+    const modo = document.querySelector("#size").value;
+    setListeners(modo)
 }
 
 function createDiv(parent) {
@@ -68,9 +74,17 @@ function createForm(parent,texto) {
     label.textContent = texto;
     label.style.color = "white"
     label.style.margin ="10px"
-    const input = document.createElement("input");
+    const input = document.createElement("select");
     input.id = "size";
+    const option = document.createElement("option");
+    const option2 = document.createElement("option");
+    option.value = "Random";
+    option.textContent = "Random";
+    option2.value = "Fade";
+    option2.textContent = "Fade";
     form.appendChild(label)
+    input.appendChild(option)
+    input.appendChild(option2)
     form.appendChild(input)
     form.style.alignItems= "center";
     
@@ -100,6 +114,7 @@ createDiv(body);
 const cockpit = document.querySelector(".cockpit");
 
 createButton(cockpit, "Resetear grilla", "reset");
+createForm(cockpit,"Modo")
 createGrid(container);
 
 
@@ -118,10 +133,14 @@ function changeColor(e) {
     if (newG < 21){newG = 21}
     let newB = parseInt(nuevos[2]) - colorB
     if (newB < 21){newB = 27}
-    console.log(newR)
-    console.log(newG)
-    console.log(newB)
     e.target.style.background = `rgb(${newR}, ${newG}, ${newB})`;
 }
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+function changeColorRandom(e) {
+    e.target.style.background = `rgb(${getRandomInt(255)}, ${getRandomInt(255)}, ${getRandomInt(255)})`;
+}
 
