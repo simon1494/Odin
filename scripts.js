@@ -1,3 +1,8 @@
+const PERCENT = 30
+const colorR = Math.floor(PERCENT*192/100);
+const colorG = Math.floor(PERCENT*157/100);
+const colorB = Math.floor(PERCENT*42/100);
+
 function setListeners () {
     const columns = document.querySelectorAll(".column");
     columns.forEach((column) => {
@@ -24,6 +29,7 @@ function createGrid(parent,x=4){
         for (let j = 0; j < sqr; j++) {
             const column = document.createElement("div");
             column.classList.add("column");
+            column.style.background = "rgb(192, 157, 42)";
             column.style.height = `${tam}px`;
             column.style.width = `${tam}px`;
             column.style.boxSizing = "border-box";
@@ -97,8 +103,25 @@ createButton(cockpit, "Resetear grilla", "reset");
 createGrid(container);
 
 
+function getColor(e){
+    let rgb = e.target.style.background
+    let items = rgb.replace("rgb(", "").replace(")", "");
+    let nuevo = items.split(", ")
+    return nuevo;
+}
+
 function changeColor(e) {
-    e.target.style.background = "white";
+    nuevos = getColor(e)
+    let newR = parseInt(nuevos[0]) - colorR
+    if (newR < 21){newR = 21};
+    let newG = parseInt(nuevos[1]) - colorG
+    if (newG < 21){newG = 21}
+    let newB = parseInt(nuevos[2]) - colorB
+    if (newB < 21){newB = 27}
+    console.log(newR)
+    console.log(newG)
+    console.log(newB)
+    e.target.style.background = `rgb(${newR}, ${newG}, ${newB})`;
 }
 
 

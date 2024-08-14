@@ -1,6 +1,6 @@
 body {
   height: 100%;
-  background-color:  #16161d;
+  background-color:  hsl(240, 14%, 10%);
 }
 
 h1 {
@@ -11,7 +11,7 @@ h1 {
 .container {
     height: 700px;
     width: 700px;
-    border: solid white;
+
     display:flex;
     align-items: center;
     justify-content: center;
@@ -27,10 +27,9 @@ h1 {
     max-height: inherit;
     height: 100px;
     width: 100px;
-    border: solid  #16161d;
+    border: solid rgb(21, 21, 27);
     border-width: 1px;
     box-sizing: border-box;
-    background-color: #c09d2a;
     flex:1;
 }
 
