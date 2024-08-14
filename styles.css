@@ -9,6 +9,15 @@ h1 {
 }
 
 .container {
+    height: 700px;
+    width: 700px;
+    border: solid white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid{
     display:flex;
     align-items: center;
     justify-content: center;
@@ -25,6 +34,3 @@ h1 {
     flex:1;
 }
 
-.column.hovered {
-    background-color: #333;
-}
