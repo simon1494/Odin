@@ -4,12 +4,16 @@ const colorG = Math.floor(PERCENT*157/100);
 const colorB = Math.floor(PERCENT*42/100);
 
 function setListeners (modo) {
+    
     const columns = document.querySelectorAll(".column");
     columns.forEach((column) => {
+        console.log(modo)
         if (modo = "Random") {
+            console.log("entre a random")
             column.addEventListener("mouseover", changeColorRandom);
         }
         else if (modo = "Fade") {
+            console.log("entre a Fade")
             column.addEventListener("mouseover", changeColor);
         }
     })

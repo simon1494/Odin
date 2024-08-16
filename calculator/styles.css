@@ -1,0 +1,85 @@
+html,
+body {
+    background-color: rgb(97, 158, 117);
+}
+
+.container {
+ margin-top: 50px;
+ background-color: rgb(148, 143, 143);
+ height: 400px;
+ width: 350px;
+ display: flex;   
+ justify-content: center;
+ flex-direction: column;
+ border-radius: 5%;
+ font-family: "Courier New";
+ font-size: 24px;
+ font-weight: bold;
+ border: solid rgb(1, 53, 3);
+ border-width: 2px;
+ box-shadow: 5px 5px 5px rgb(1, 92, 4);
+}
+
+.fila {
+    border: solid black;
+    border-width: 0px;
+    flex: 1;
+    display:flex;
+    margin: 5px;
+}
+
+.boton {
+    border: solid black;
+    border-width: 0px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:5px;
+    border-radius: 10%;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+    border: solid rgb(0, 82, 27);
+    border-width: 1px;
+}
+
+#f0 {
+    background-color:   rgb(22, 22, 29);
+    border: solid rgb(0, 82, 27);
+    border-width: 1px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.equal {
+    flex: 3 1 0;
+}
+
+.number {
+    padding: 5px;
+    background-color: transparent;
+}
+
+.equal,
+.clear,
+.operator {
+    background-color: rgb(0, 219, 73);
+}
+
+.screen {
+    color:white;
+    flex: 1;
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+    align-content: center;
+    padding-right: 20px;
+    padding-top: 8px;
+    font-family: 'Calculator', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.display {
+    justify-content: right;
+   
+}
