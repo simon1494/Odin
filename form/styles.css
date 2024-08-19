@@ -1,0 +1,130 @@
+body, html {
+    border: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    margin: 0;
+}
+
+.prueba {
+    flex: 1;
+    background-color: grey;
+    border-width: 1px;
+}
+
+#prueba_1,
+#prueba_3 {
+    background-color: rgb(7, 0, 6);
+}
+
+#prueba_2 {
+    flex: 6 1 0;
+    display: flex;
+}
+
+.sub_prueba {
+    flex: 1;
+}
+
+#sub_prueba_2 {
+    flex: 1.6 1 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    flex: 1;
+    background-color: rgba(223, 253, 219, 0.801);
+
+}
+
+#form_2 {
+    flex: 1.2 1 0;
+    background-color: rgb(248, 255, 249);
+    box-shadow: 2px 5px 4px 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+#sub_prueba_1 {
+    background-size: cover;
+    display: flex;
+    background-repeat: no-repeat;
+    border: 0px;
+    opacity: 1;
+}
+
+.banner {
+    opacity: 0.6;
+    flex: 1;
+    background-color: rgb(255, 246, 246);
+    height: 15vh;  
+    top: 23vh;
+    position: relative; 
+    display: flex;
+}
+
+.sub_banner {
+    flex: 1
+}
+
+#sub_banner_1 {
+    flex: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#sub_banner_2 {
+    font-family: 'Glizard', sans-serif;
+    font-size: 7.5vh;
+    text-align: left;
+    flex: 1.1;
+}
+
+.ingresos {
+    flex: 1;
+    padding: .5rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+}
+
+input {
+    margin-right: 3rem;
+}
+
+label {
+    font-size: 0.85rem;
+    padding-bottom: 0.2rem;
+    font-weight: 600;
+    letter-spacing: .15rem;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#ingresos_1 {
+    font-family: 'Glizard', sans-serif;
+    font-size: 2rem;
+    font-weight:600;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.info_nombre,
+.info_contacto,
+.info_pass {
+    flex:1;
+    display: flex;
+    margin-left: 1.5rem;
+}
+
+#info_nombre_3,
+#info_contacto_3,
+#info_pass_3 {
+    flex:.3 1 0;
+}
+
