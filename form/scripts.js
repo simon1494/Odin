@@ -96,3 +96,5 @@ placeContainers(retrieveElement("#ingresos_4"), howMany=3, clase="info_pass")
 
 setForm()
 
+const form_1 = document.querySelector("#form_1")
+form_1.textContent = "Alo"
