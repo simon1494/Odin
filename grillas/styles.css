@@ -1,0 +1,21 @@
+:root {
+    --main-color: rgb(99, 97, 97);
+    --item-color: rgb(243, 106, 101);
+    --square: 150px;
+    --filas: var(--square) var(--square) var(--square) var(--square);
+    --columnas: var(--square) var(--square) var(--square) var(--square);
+}
+
+.container {
+    background-color: var(--main-color);
+    display: grid;
+    grid-template-rows: var(--filas);
+    grid-template-columns: var(--columnas);
+    gap: 35px
+}
+
+.item {
+    background-color: var(--item-color);
+    border: 1px solid black;
+    box-sizing: border-box;
+}
