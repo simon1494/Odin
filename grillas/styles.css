@@ -1,21 +1,69 @@
 :root {
     --main-color: rgb(99, 97, 97);
     --item-color: rgb(243, 106, 101);
-    --square: 150px;
-    --filas: var(--square) var(--square) var(--square) var(--square);
-    --columnas: var(--square) var(--square) var(--square) var(--square);
+    --item-color-dark: rgb(133, 58, 55);
+    --square: 400px;
+    --filas: repeat(2, 1fr);
+    --columnas: repeat(4, 1fr);
+}
+
+html {
+ background-color: var(--main-color);
 }
 
 .container {
     background-color: var(--main-color);
     display: grid;
+    height: var(--square);
+    width: var(--square);
     grid-template-rows: var(--filas);
     grid-template-columns: var(--columnas);
-    gap: 35px
+    gap: 2px;
 }
 
 .item {
     background-color: var(--item-color);
-    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    border-radius: 35%;
+    border: 1px transparent black;
     box-sizing: border-box;
 }
+
+.item:hover {
+    background-color: var(--item-color-dark);
+    color: var(--item-color-dark);
+    border: 1px solid black;;
+    transition: all 500ms;
+}
+
+.material-icons {
+    padding: 10px;
+    font-size: 70px;
+}
+
+.absolute {
+    color:white;
+    position: absolute;
+    opacity: 0;
+    flex:1;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.absolute:hover {
+    position: absolute;
+    opacity: 1;
+    transition: all 1s;
+}
+
+.new-amsterdam-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+  }
